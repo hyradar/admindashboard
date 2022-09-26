@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Layout based off of TOP example, but what if I want something different? */
+/* Layout: Memrise
+Language Selection: Rocket Languages */
+body {
+    display: grid;
+    grid-template-areas: 
+    "dash head head head"
+    "dash main main main"
+    "dash main main main"
+    ;
+}
+
+.dashboard {
+    grid-area: dash;
+}
+
+.header {
+    grid-area: head;
+}
+
+.content {
+    grid-area: main;
+}
