@@ -28,24 +28,99 @@ body {
     min-height: 100vh;
 }
 
+
+/* Dashboard */
+
 .dashboard {
     grid-area: dash;
-    background-color: white;
+    background-color: rgba(181, 144, 69, 0.809);
     width: 20vw;
     min-height: 100%;
+
+    display: grid;
+    grid-template-rows: 10vh 42vh 30vh;
+    color: white;
 }
+
+.dashtitle {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashtitle img {
+    width: 20%;
+}
+
+.dashtitle p {
+    width: 70%;
+    font-size: 2.2rem;
+    
+}
+
+.upperoptions {
+    margin-top: 1rem;
+    display: grid;
+}
+
+.loweroptions {
+    margin-top: 2rem;
+    display: grid;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.item img {
+    margin-left: 1rem;
+    width: 15%;
+    
+}
+
+.item p {
+    font-size: 1.4rem;
+    margin-left: 10px;
+
+    text-shadow: 1px 1px black;
+}
+
+.item p:hover {
+    border-bottom: 2px solid white;
+    
+    -webkit-transition: 0.5s;
+    transition: 0.1s;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+/* Header */
 
 .header {
     grid-area: head;
-    border: 1px solid green;
     width: 80vw;
     min-height: 20vh;
-    background-color: var(--wall-color);
+    background-color: white;
 }
+
+/* Content */
 
 .content {
     grid-area: main;
-    border: 1px solid blue;
     width: 80vw;
     min-height: 80vh;
     background-color: var(--blue-color);
@@ -73,7 +148,6 @@ body {
     align-self: center;
     justify-self: center;
     margin: 10px;
-    /* border: 1px solid red; */
     height: 94%;
     
     display: flex;
