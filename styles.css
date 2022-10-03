@@ -22,7 +22,7 @@ Language Selection: Rocket Languages */
 body {
     display: grid;
     grid-template-areas: 
-    "dash head head head"
+    "dash main main main"
     "dash main main main"
     "dash main main main"
     ;
@@ -103,16 +103,6 @@ body {
 a {
     text-decoration: none;
     color: white;
-}
-
-
-/* Header */
-
-.header {
-    grid-area: head;
-    width: 80vw;
-    min-height: 20vh;
-    background-color: white;
 }
 
 /* MainView */
