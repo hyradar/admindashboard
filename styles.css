@@ -13,6 +13,8 @@
     --blue-color: #A6B9C4;
     --green-color: #069700;
     --light-brown-color: #e4c4b0;
+    --graph-border-radius: 10px;
+    --graph-border-color: rgb(195, 194, 194);
 }
 /* Layout based off of TOP example, but what if I want something different? */
 /* Layout: Memrise
@@ -104,10 +106,6 @@ a {
 }
 
 
-
-
-
-
 /* Header */
 
 .header {
@@ -117,29 +115,118 @@ a {
     background-color: white;
 }
 
-/* Content */
+/* MainView */
 
-.content {
+.mainview {
     grid-area: main;
     width: 80vw;
     min-height: 80vh;
     background-color: var(--blue-color);
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 50% 50%;
+}
 
+/* Overview */
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 200px 362px;
+}
+
+.statheader {
+    margin: 10px 20px 10px 20px;
     display: grid;
-    grid-template-columns: repeat(3, 220px);
-    /* grid-template-columns: repeat(4, 1fr); */
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    /* ^^^ Change to more responsive setting */
+    gap: 1.5rem;
+}
+
+.infocard {
+    border-radius: 5px;
+    border: 2px solid rgb(167, 167, 167);
+    height: 8rem;
+    background-color: white;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.infocard p {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.statgraph {
+    margin: 0px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-self: center;
+    border: 1px solid var(--graph-border-color);
+}
+
+.graph {
+    background-color: white;
+    border: 1px solid var(--graph-border-color);
+    border-top-left-radius: var(--graph-border-radius);
+    border-bottom-left-radius: var(--graph-border-radius);
+}
+
+.graphsidebar {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.graphinfocard {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid var(--graph-border-color);
+}
+
+.graphinfocard:nth-child(1) {
+    border-top-right-radius: var(--graph-border-radius);
+}
+
+.graphinfocard:nth-child(3) {
+    border-bottom-right-radius: var(--graph-border-radius);
+}
+
+.graphinfocard p {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+}
+
+.graphinfocard p:nth-child(1) {
+    color: grey;
+    font-size: 1.4rem;
+}
+
+.graphinfocard p:nth-child(2) {
+    color: black;
+    font-size: 1.8rem;
+}
+/* Lessons Section */
+
+.lessons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* make this more responsive */
 }
 
 .card{
-    
     margin: 30px;
-    width: 220px;
-    height: 329px;
+    width: 270px;
+    height: 429px;
     background-color: white;
-    
     border-radius: 5px;
-
 }
 
 /* internal skeleton of card */
@@ -163,14 +250,9 @@ a {
 
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    /* background-image: url(./cardimages/france-best-cities-lille.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .cardtitle {
-
 height: 25%;
 width: 100%;
 }
