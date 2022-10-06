@@ -16,9 +16,7 @@
     --graph-border-radius: 10px;
     --graph-border-color: rgb(195, 194, 194);
 }
-/* Layout based off of TOP example, but what if I want something different? */
-/* Layout: Memrise
-Language Selection: Rocket Languages */
+
 body {
     display: grid;
     grid-template-areas: 
@@ -26,7 +24,6 @@ body {
     "dash main main main"
     "dash main main main"
     ;
-
     min-height: 100vh;
 }
 
@@ -58,7 +55,48 @@ body {
 .dashtitle p {
     width: 70%;
     font-size: 2.2rem;
+}
+
+.header {
+    height: 15vh;
+    text-align: center;
     
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.headerleft {
+    border: 1px solid green;
+    text-align: left;
+    margin-left: 20px;
+    color: black;
+}
+
+.headerright {
+    border: 1px solid red;
+    justify-self: flex-end;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin-right: 20px;
+}
+
+.headerright p {
+    font-size: 1.3rem;
+}
+
+.headericons {
+    margin-right: 15px;
+}
+
+.headericons img {
+    width: 2rem;
+    margin: 0px 10px 0px 10px;
 }
 
 .upperoptions {
@@ -76,18 +114,17 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-left: .8rem;
 }
 
 .item img {
     margin-left: 1rem;
     width: 2.1rem;
-    
 }
 
 .item p {
     font-size: 1.4rem;
     margin-left: 10px;
-
     text-shadow: 1px 1px black;
 }
 
@@ -111,7 +148,8 @@ a {
     grid-area: main;
     width: 80vw;
     min-height: 80vh;
-    background-color: var(--blue-color);
+    /* background-color: var(--blue-color); */
+    background-color: #eaebec;
     display: flex;
     flex-direction: column;
     grid-template-rows: 50% 50%;
