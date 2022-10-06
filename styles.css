@@ -32,7 +32,8 @@ body {
 
 .dashboard {
     grid-area: dash;
-    background-color: rgba(181, 144, 69, 0.809);
+    /* background-color: rgba(181, 144, 69, 0.809); */
+    background-color: #ad8368;
     width: 20vw;
     min-height: 100%;
 
@@ -68,14 +69,11 @@ body {
 }
 
 .headerleft {
-    border: 1px solid green;
     text-align: left;
     margin-left: 20px;
-    color: black;
 }
 
 .headerright {
-    border: 1px solid red;
     justify-self: flex-end;
     
     display: flex;
@@ -91,11 +89,12 @@ body {
 }
 
 .headericons {
-    margin-right: 15px;
+    margin-right: 20px;
+    border-right: 1px solid grey;
 }
 
 .headericons img {
-    width: 2rem;
+    width: 1.6rem;
     margin: 0px 10px 0px 10px;
 }
 
@@ -179,13 +178,25 @@ a {
     
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: space-around;
+}
+
+.infocard :nth-child(1) {
+    color: grey;
+    font-size: 1.3rem;
+}
+
+.infocard :nth-child(2) {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 550;
 }
 
 .infocard p {
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
+    padding: 15px;
 }
 
 .statgraph {
@@ -201,11 +212,16 @@ a {
     border: 1px solid var(--graph-border-color);
     border-top-left-radius: var(--graph-border-radius);
     border-bottom-left-radius: var(--graph-border-radius);
+    height: 55vh;
+}
+
+.graph img {
+    height: 100%;
 }
 
 .graphsidebar {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .graphinfocard {
@@ -221,7 +237,7 @@ a {
     border-top-right-radius: var(--graph-border-radius);
 }
 
-.graphinfocard:nth-child(3) {
+.graphinfocard:nth-child(4) {
     border-bottom-right-radius: var(--graph-border-radius);
 }
 
@@ -234,12 +250,13 @@ a {
 
 .graphinfocard p:nth-child(1) {
     color: grey;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .graphinfocard p:nth-child(2) {
     color: black;
     font-size: 1.8rem;
+    font-weight: 550;
 }
 /* Lessons Section */
 
