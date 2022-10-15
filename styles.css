@@ -147,8 +147,8 @@ a {
 
 .mainview {
     grid-area: main;
-    width: 80vw;
-    min-height: 80vh;
+    min-width: 80vw;
+    /* min-height: 80vh; */
     /* background-color: var(--blue-color); */
     background-color: #eaebec;
     display: flex;
@@ -266,7 +266,13 @@ border: 2px solid blue;
 }
 /* Lessons Section */
 
-.lessons {
+.lessons h2 {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.lessongrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* make this more responsive */
@@ -388,7 +394,7 @@ width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
-    .lessons {
+    .lessongrid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
