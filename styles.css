@@ -50,7 +50,8 @@ body {
 }
 
 .dashtitle img {
-    width: 20%;
+        margin-left: 1rem;
+        width: 2.1rem;
 }
 
 .dashtitle p {
@@ -175,7 +176,6 @@ a {
     border: 2px solid rgb(167, 167, 167);
     height: 8rem;
     background-color: white;
-    
     display: flex;
     flex-wrap: wrap;
     align-items: space-around;
@@ -183,7 +183,7 @@ a {
 
 .infocard :nth-child(1) {
     color: grey;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .infocard :nth-child(2) {
@@ -193,6 +193,7 @@ a {
 }
 
 .infocard p {
+    height: 50px;
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
@@ -208,7 +209,6 @@ border: 2px solid blue;
     display: grid;
     grid-template-columns: 60% 40%;
     justify-self: center;
-    border: 1px solid var(--graph-border-color);
 }
 
 .graph {
@@ -379,3 +379,9 @@ width: 100%;
     color: black;
 }
 
+@media (max-width: 1050px) {
+    .statheader {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
