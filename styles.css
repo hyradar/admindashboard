@@ -199,6 +199,10 @@ a {
     padding: 15px;
 }
 
+.infocard:hover {
+border: 2px solid blue;
+}
+
 .statgraph {
     margin: 0px 20px 0px 20px;
     display: grid;
