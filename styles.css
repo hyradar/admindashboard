@@ -32,14 +32,14 @@ body {
 
 .dashboard {
     grid-area: dash;
-    /* background-color: rgba(181, 144, 69, 0.809); */
     background-color: #ad8368;
     width: 20vw;
     min-height: 100%;
 
     display: grid;
-    grid-template-rows: 10vh 42vh 30vh;
+    grid-template-rows: 15vh 42vh 30vh;
     color: white;
+    min-width: 200px;
 }
 
 .dashtitle {
@@ -76,7 +76,7 @@ body {
 
 .headerright {
     justify-self: flex-end;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,6 +91,7 @@ body {
 
 .headericons {
     margin-right: 20px;
+    padding: 10px;
     border-right: 1px solid grey;
 }
 
@@ -217,6 +218,7 @@ border: 2px solid blue;
     border-top-left-radius: var(--graph-border-radius);
     border-bottom-left-radius: var(--graph-border-radius);
     height: 55vh;
+    width: 100%;
 }
 
 .graph img {
@@ -268,6 +270,7 @@ border: 2px solid blue;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* make this more responsive */
+    justify-content: center;
 }
 
 .card{
@@ -276,6 +279,7 @@ border: 2px solid blue;
     height: 429px;
     background-color: white;
     border-radius: 5px;
+    justify-self: center;
 }
 
 /* internal skeleton of card */
@@ -379,9 +383,12 @@ width: 100%;
     color: black;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1175px) {
     .statheader {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+    .lessons {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
